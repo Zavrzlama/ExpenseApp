@@ -1,0 +1,1 @@
+ALTER TABLE clients ADD CONSTRAINT PK_clients PRIMARY KEY(id)
