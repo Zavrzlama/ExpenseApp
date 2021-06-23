@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj": {}
+    "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesAppDAL\\ExpensesAppDAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj": {
+    "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesAppDAL\\ExpensesAppDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj",
-        "projectName": "ExcelImport",
-        "projectPath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj",
+        "projectUniqueName": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesAppDAL\\ExpensesAppDAL.csproj",
+        "projectName": "ExpensesAppDAL",
+        "projectPath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesAppDAL\\ExpensesAppDAL.csproj",
         "packagesPath": "C:\\Users\\tonism\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\obj\\",
+        "outputPath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesAppDAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tonism\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -26,8 +26,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
             "projectReferences": {}
           }
         },
@@ -38,20 +38,14 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "dependencies": {
-            "EPPlus": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.5.5, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[12.0.3, )"
-            },
-            "Npgsql": {
-              "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[2.1.0, )",
+              "autoReferenced": true
             }
           },
           "imports": [
@@ -64,11 +58,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
