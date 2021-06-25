@@ -6,13 +6,13 @@ using ExpensesApp.API.Entities;
 
 namespace ExpensesApp.API.Services
 {
-    public class ClientRoleRepository : IClientRolesRepository
+    public class ClientRolesRepository : IClientRolesRepository
     {
         private readonly ExpenseAppContext _dbContext;
 
         //private readonly ExpenseAppContext _dbContext;
 
-        public ClientRoleRepository(ExpenseAppContext dbContext)
+        public ClientRolesRepository(ExpenseAppContext dbContext)
         {
             _dbContext = dbContext ??  throw new ArgumentNullException();
         }
@@ -24,12 +24,12 @@ namespace ExpensesApp.API.Services
 
         public ClientRole GetClientRole(int id)
         {
-            return _dbContext.ClientRoles.FirstOrDefault(x => x.ID == id);
+            return _dbContext.ClientRoles.FirstOrDefault(x => x.ClientRoleId == id);
         }
 
         public bool ClientRoleExists(int id)
         {
-            return _dbContext.ClientRoles.Any(x=> x.ID == id);
+            return _dbContext.ClientRoles.Any(x=> x.ClientRoleId == id);
         }
 
         public void AddClientRole(ClientRole clientRole)

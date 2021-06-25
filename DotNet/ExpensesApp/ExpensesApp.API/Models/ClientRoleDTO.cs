@@ -2,7 +2,7 @@
 {
     public class ClientRoleDTO
     {
-        public int ID { get; set; }
+        public int ClientRoleId { get; set; }
         public string RoleName { get; set; }
         public string Description { get; set; }
     }

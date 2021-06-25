@@ -3,15 +3,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExpensesApp.API.Entities
 {
-    [Table("client_roles")]
-    public class ClientRole
+    public class Client
     {
         [Column("id")]
-        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ClientRoleId { get; set; }
+        [Key]
+        public int ClientId { get; set; }
 
-        [Column("role_name")] [Required] public string RoleName { get; set; }
+        [Column("client_name")] [Required] public string ClientName { get; set; }
+
         [Column("description")] public string Description { get; set; }
+
+        [ForeignKey("client_role_id")] public int ClientRoleID { get; set; }
+        public ClientRole ClientRole { get; set; }
     }
 }

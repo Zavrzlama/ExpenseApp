@@ -9,7 +9,7 @@ namespace ExpensesApp.API.Entities
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int ID { get; set; }
+        public int ExpenseTypeID { get; set; }
 
         [Column("description")] [Required] public string Dwscription { get; set; }
 

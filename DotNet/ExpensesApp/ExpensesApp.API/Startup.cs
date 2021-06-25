@@ -1,15 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using ExpensesApp.API.DBContexts;
 using ExpensesApp.API.Services;
@@ -32,7 +26,8 @@ namespace ExpensesApp.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<ExpenseAppContext>(o => o.UseNpgsql(_configuration["Database:ConnectionString"]));
-            services.AddScoped<IClientRolesRepository, ClientRoleRepository>();
+            services.AddScoped<IClientRolesRepository, ClientRolesRepository>();
+            services.AddScoped<IExpenseTypesRepository, ExpenseTypesRepository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 

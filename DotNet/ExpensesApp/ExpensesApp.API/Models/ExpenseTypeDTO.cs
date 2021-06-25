@@ -2,7 +2,7 @@
 {
     public class ExpenseTypeDTO
     {
-        public int ID { get; set; }
+        public int ExpenseTypeId { get; set; }
         public string Description { get; set; }
         public string ExpenseType { get; set; }
         public decimal ExpectedExpense { get; set; }
