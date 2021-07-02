@@ -7,8 +7,8 @@ BEGIN
 			,expense_type VARCHAR(10)
 			,expected_expense NUMERIC(13, 2)
 			,expense_notify NUMERIC(13, 2)
-			,datecreated DATE NOT NULL
-			,dateupdated DATE NOT NULL
+			,date_created DATE NOT NULL
+			,date_updated DATE NOT NULL
 			);
 	END IF;
 END; $$

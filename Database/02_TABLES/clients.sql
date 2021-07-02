@@ -6,6 +6,10 @@ BEGIN
 			,client_name VARCHAR(100) NOT NULL
 			,client_role_id NUMERIC NOT NULL
 			,description VARCHAR(4000)
+			,date_created DATE NOT NULL
+			,date_updated DATE NOT NULL
 			);
 	END IF;
 END; $$
+
+ALTER TABLE clients ADD CONSTRAINT PK_clients PRIMARY KEY(id)

@@ -1,0 +1,3 @@
+CREATE TRIGGER clients_audit 
+BEFORE INSERT OR UPDATE ON clients
+FOR EACH ROW EXECUTE PROCEDURE f_clients_audit();
