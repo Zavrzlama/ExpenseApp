@@ -34,12 +34,10 @@ namespace ExpensesApp.API.Controllers
         [HttpGet("{id}", Name = "GetExpenseType")]
         public IActionResult GetExpenseTypeById(int id)
         {
-            if (!_expenseTypesRepository.ExpenseTypeExists(id))
-            {
-                return NotFound();
-            }
-
             var expenseTypeEntity = _expenseTypesRepository.GetExpenseType(id);
+
+            if (expenseTypeEntity == null)
+                return NotFound();
 
             return Ok(_mapper.Map<ExpenseTypeDTO>(expenseTypeEntity));
         }
@@ -60,7 +58,15 @@ namespace ExpensesApp.API.Controllers
         [HttpPut("{id}")]
         public IActionResult PutExpenseType(int id,ExpenseTypeInsertDTO expenseTypeInsertDto)
         {
-            /*TO DO*/
+            var expenseTypeEntity = _expenseTypesRepository.GetExpenseType(id);
+
+            if (expenseTypeEntity == null)
+                return NotFound();
+
+            _mapper.Map(expenseTypeInsertDto, expenseTypeEntity);
+
+            _expenseTypesRepository.Save();
+
             return NoContent();
         }
 

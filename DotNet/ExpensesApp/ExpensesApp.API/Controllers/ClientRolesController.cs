@@ -61,12 +61,10 @@ namespace ExpensesApp.API.Controllers
         [HttpPut("{id}")]
         public IActionResult PutClientRole(int id, ClientRoleInsertDTO clientRolesInsertDTO)
         {
-            if (!_repository.ClientRoleExists(id))
-            {
-                return NotFound();
-            }
-
             var clientRoleEntity = _repository.GetClientRole(id);
+
+            if (clientRoleEntity == null)
+                return NotFound();
 
             _mapper.Map(clientRolesInsertDTO,clientRoleEntity);
 
@@ -78,22 +76,17 @@ namespace ExpensesApp.API.Controllers
         [HttpPatch("{id}")]
         public IActionResult PatchClientRole(int id, JsonPatchDocument<ClientRoleInsertDTO> jsonDoc)
         {
-
             var clientRoleEntity = _repository.GetClientRole(id);
 
-            if (!_repository.ClientRoleExists(id))
-            {
+            if (clientRoleEntity == null)
                 return NotFound();
-            }
 
             var roleForPatch = _mapper.Map<ClientRoleInsertDTO>(clientRoleEntity);
 
             jsonDoc.ApplyTo(roleForPatch,ModelState);
 
             if (!ModelState.IsValid)
-            {
                 return BadRequest();
-            }
 
             _mapper.Map(roleForPatch, clientRoleEntity);
             _repository.Save();
@@ -104,17 +97,13 @@ namespace ExpensesApp.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteClientRole(int id)
         {
-            if (!_repository.ClientRoleExists(id))
-            {
-                return NotFound();
-            }
-
             var clientRole = _repository.GetClientRole(id);
-
+            if (clientRole == null)
+                return NotFound();
+            
             _repository.DeleteClientRole(clientRole);
 
             return NoContent();
         }
-
     }
 }

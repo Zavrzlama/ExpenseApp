@@ -1,4 +1,6 @@
-﻿namespace ExpensesApp.API.Models
+﻿using System;
+
+namespace ExpensesApp.API.Models
 {
     public class ExpenseTypeDTO
     {
@@ -7,5 +9,7 @@
         public string ExpenseType { get; set; }
         public decimal ExpectedExpense { get; set; }
         public decimal ExpenseNotify { get; set; }
+        public DateTime DateCreated { get; set; }
+        public DateTime DateUpdated { get; set; }
     }
 }

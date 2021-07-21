@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">
+        <button class="btn btn-outline-secondary" (click)="onBack()"><span class="fa fa-angle-left"></span> Back</button>
+        {{pageTitle}}
+    </div>
+    <div class="card-body">
+    <form novalidate (ngSubmit)="saveClientRole()" [formGroup]="clientRoleForm">
+
+        <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="roleName">
+                Role name:</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" id="roleName" placeholder="Role name (Required)"
+                    formControlName="roleName">
+                <span class="text-danger">
+                    {{errorRoleName}}
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="roleDescription">Role name:</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" id="roleDescription" placeholder="Description"
+                    formControlName="description">
+            </div>
+        </div>
+        <div>
+        <button class="btn btn-outline-primary" type="submit" [disabled]="!clientRoleForm.valid">Save</button>
+    </div>
+<div>
+        
+    </div>
+    </form>
+
+</div>
+</div>

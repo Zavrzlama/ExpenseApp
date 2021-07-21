@@ -29,6 +29,9 @@ namespace ExpensesApp.API
             services.AddScoped<IClientRolesRepository, ClientRolesRepository>();
             services.AddScoped<IExpenseTypesRepository, ExpenseTypesRepository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
+            services.AddCors(options => options.AddPolicy("AllowEverything",builder => builder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,9 +45,10 @@ namespace ExpensesApp.API
             {
                 app.UseHsts();
             }
-
+            app.UseCors("AllowEverything");
             app.UseHttpsRedirection();
             app.UseMvc();
+            
         }
     }
 }
