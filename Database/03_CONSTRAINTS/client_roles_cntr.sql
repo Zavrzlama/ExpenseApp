@@ -1,1 +1,0 @@
-ALTER TABLE clients ADD CONSTRAINT FK_clients_client_roles FOREIGN KEY (client_role_id) REFERENCES client_roles(id) 
