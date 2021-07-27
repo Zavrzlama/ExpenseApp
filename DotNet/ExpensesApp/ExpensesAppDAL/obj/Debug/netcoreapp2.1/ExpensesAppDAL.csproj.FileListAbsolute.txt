@@ -1,0 +1,9 @@
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\bin\Debug\netcoreapp2.1\ExpensesAppDAL.deps.json
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\bin\Debug\netcoreapp2.1\ExpensesAppDAL.dll
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\bin\Debug\netcoreapp2.1\ExpensesAppDAL.pdb
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\obj\Debug\netcoreapp2.1\ExpensesAppDAL.csprojAssemblyReference.cache
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\obj\Debug\netcoreapp2.1\ExpensesAppDAL.AssemblyInfoInputs.cache
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\obj\Debug\netcoreapp2.1\ExpensesAppDAL.AssemblyInfo.cs
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\obj\Debug\netcoreapp2.1\ExpensesAppDAL.csproj.CoreCompileInputs.cache
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\obj\Debug\netcoreapp2.1\ExpensesAppDAL.dll
+C:\Users\tonism\Desktop\git_test\DotNet\ExpensesApp\ExpensesAppDAL\obj\Debug\netcoreapp2.1\ExpensesAppDAL.pdb
