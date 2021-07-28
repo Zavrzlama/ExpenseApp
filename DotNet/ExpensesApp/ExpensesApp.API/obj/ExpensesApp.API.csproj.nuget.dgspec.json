@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj": {}
+    "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj": {
+    "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj",
+        "projectUniqueName": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj",
         "projectName": "ExpensesApp.API",
-        "projectPath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj",
+        "projectPath": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj",
         "packagesPath": "C:\\Users\\tonism\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesApp.API\\obj\\",
+        "outputPath": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tonism\\AppData\\Roaming\\NuGet\\NuGet.Config",

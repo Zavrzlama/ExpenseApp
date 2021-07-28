@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fxjOsVG8eZtiE8ToFBAojjdueQZWRmvbr4d2yjHlXq3LajabH2D0cuPLDjOMbPPZ0xgpZCjxG7WZ0/UNr0XTww==",
+  "dgSpecHash": "ZLKsR3sAblxsR0PkntZPDWWsH/b7WxZqnm8sARYCJfSSIKgor/9nFgtHp1/hKCrCpMZmhAcbC1NYuCGvrAzX8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj",
+  "projectFilePath": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesApp.API\\ExpensesApp.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonism\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\tonism\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

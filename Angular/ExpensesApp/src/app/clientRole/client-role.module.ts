@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ClientRoleListComponent } from './clientRole-list.component';
+import { ClientRoleListComponent } from './clientRole-list/clientRole-list.component';
 import { ClientRoleEditComponent } from './clientRole-edit/client-role-edit.component';
 
 @NgModule({
@@ -11,7 +11,6 @@ import { ClientRoleEditComponent } from './clientRole-edit/client-role-edit.comp
     ClientRoleEditComponent],
   imports: [
     CommonModule,
-    FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild([
       { path: 'clientRoles', component: ClientRoleListComponent},

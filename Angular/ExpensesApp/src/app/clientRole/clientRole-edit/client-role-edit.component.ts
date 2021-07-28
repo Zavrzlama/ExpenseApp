@@ -42,7 +42,6 @@ export class ClientRoleEditComponent implements OnInit, OnDestroy {
         const id = params.get('id');
         this.getClientRole(Number(id));
       })
-
   }
 
   getClientRole(id: number): void {
@@ -80,16 +79,17 @@ export class ClientRoleEditComponent implements OnInit, OnDestroy {
 
         if (editedClinetRole.clientRoleId == 0) {
           this.clientRoleService.createClientRole(editedClinetRole).subscribe({
-            next:() => this.onSaveComplete,
-            error: err=> this.errorMessage=err})
+            next: () => this.onSaveComplete,
+            error: err => this.errorMessage = err
+          })
         } else {
-          this.clientRoleService.updateClientRole(editedClinetRole).subscribe({ 
-            next: () => this.onSaveComplete(), 
-            error: err => this.errorMessage = err 
+          this.clientRoleService.updateClientRole(editedClinetRole).subscribe({
+            next: () => this.onSaveComplete(),
+            error: err => this.errorMessage = err
           });
         }
       }
-    }else{
+    } else {
       this.errorMessage = 'Correct validation errors!'
     }
     this.onSaveComplete();

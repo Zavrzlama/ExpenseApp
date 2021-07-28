@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login/login.component';
 import { ClientRoleModule } from './clientRole/client-role.module';
 import { RouterModule } from '@angular/router';
+import { ClientModule } from './client/client.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([]),
     HttpClientModule,
-    ClientRoleModule
+    ClientRoleModule,
+    ClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

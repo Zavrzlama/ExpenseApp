@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RJbLbngnbZZQOnT/y7CRU36+rMnR2kXwZamny8PGjJkMXZKiscADbShFj/FLAHyasr/PeYwyqwBOiAS4ezXw1w==",
+  "dgSpecHash": "PO7yfOoK/Y/EPyHOzYy377C4cHGDdJO4+Dj4rG8B9fbccTBKkh+yGfRYmkhaFr+aN0xD3ZFqZiW6LjTxIneYVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExpensesApp\\ExpensesAppDAL\\ExpensesAppDAL.csproj",
+  "projectFilePath": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesAppDAL\\ExpensesAppDAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonism\\.nuget\\packages\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
     "C:\\Users\\tonism\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
