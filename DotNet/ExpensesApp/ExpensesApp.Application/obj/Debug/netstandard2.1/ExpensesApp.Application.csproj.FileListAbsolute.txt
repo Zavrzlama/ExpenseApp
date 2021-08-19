@@ -1,0 +1,12 @@
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\bin\Debug\netstandard2.1\ExpensesApp.Application.deps.json
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\bin\Debug\netstandard2.1\ExpensesApp.Application.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\bin\Debug\netstandard2.1\ExpensesApp.Application.pdb
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\bin\Debug\netstandard2.1\ExpensesApp.Domain.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\bin\Debug\netstandard2.1\ExpensesApp.Domain.pdb
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\obj\Debug\netstandard2.1\ExpensesApp.Application.csprojAssemblyReference.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\obj\Debug\netstandard2.1\ExpensesApp.Application.AssemblyInfoInputs.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\obj\Debug\netstandard2.1\ExpensesApp.Application.AssemblyInfo.cs
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\obj\Debug\netstandard2.1\ExpensesApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\obj\Debug\netstandard2.1\ExpensesApp.Application.csproj.CopyComplete
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\obj\Debug\netstandard2.1\ExpensesApp.Application.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Application\obj\Debug\netstandard2.1\ExpensesApp.Application.pdb

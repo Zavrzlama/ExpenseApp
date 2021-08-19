@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6cpYq3ThhkAaScHccWWXBrF21v/cxSGx58ITCTJRh7l8TRi6rmbVpJw260f/4ikcNdfOWcePXUjXPob+4GsPzQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesApp.Domain\\ExpensesApp.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tonism\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\tonism\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\tonism\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

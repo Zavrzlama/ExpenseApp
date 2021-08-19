@@ -1,54 +1,49 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using AutoMapper;
-using ExpensesApp.API.DBContexts;
-using ExpensesApp.API.Services;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
+using ExpensesApp.Application;
+using ExpensesApp.Persistence;
 
-namespace ExpensesApp.API
+namespace ExpensesApp.Api
 {
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            Configuration = configuration;
         }
 
-        private IConfiguration _configuration { get; }
+        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddApllicationServices();
+            services.AddPersistenceServices(Configuration);
+            services.AddControllers();
 
-            services.AddDbContext<ExpenseAppContext>(o => o.UseNpgsql(_configuration["Database:ConnectionString"]));
-            services.AddScoped<IClientRolesRepository, ClientRolesRepository>();
-            services.AddScoped<IExpenseTypesRepository, ExpenseTypesRepository>();
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-
-            services.AddCors(options => options.AddPolicy("AllowEverything",builder => builder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()));
+            services.AddCors(options =>
+                options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseHsts();
-            }
-            app.UseCors("AllowEverything");
+
             app.UseHttpsRedirection();
-            app.UseMvc();
-            
+            app.UseRouting();
+
+            app.UseCors("Open");
+
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClientRolesService } from '../clientRoles.service';
 import { Subscription } from 'rxjs';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ClientRole } from '../Models/clientRoleModel.component';
 
 @Component({
@@ -93,7 +93,6 @@ export class ClientRoleEditComponent implements OnInit, OnDestroy {
       this.errorMessage = 'Correct validation errors!'
     }
     this.onSaveComplete();
-
   }
 
   onSaveComplete(): void {

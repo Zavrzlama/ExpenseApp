@@ -1,0 +1,8 @@
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\bin\Debug\netstandard2.0\ExpensesApp.Domain.deps.json
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\bin\Debug\netstandard2.0\ExpensesApp.Domain.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\bin\Debug\netstandard2.0\ExpensesApp.Domain.pdb
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.AssemblyInfoInputs.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.AssemblyInfo.cs
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.pdb

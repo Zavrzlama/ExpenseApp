@@ -11,7 +11,6 @@ import { ClientRole } from './Models/clientRoleModel.component';
 })
 export class ClientRolesService {
 
-    
     constructor(private http: HttpClient) { }
 
     getClientRoles(): Observable<IClientRole[]> {

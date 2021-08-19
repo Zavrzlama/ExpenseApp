@@ -1,0 +1,14 @@
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\bin\Debug\netstandard2.1\ExpensesApp.Persistence.deps.json
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\bin\Debug\netstandard2.1\ExpensesApp.Persistence.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\bin\Debug\netstandard2.1\ExpensesApp.Persistence.pdb
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\bin\Debug\netstandard2.1\ExpensesApp.Application.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\bin\Debug\netstandard2.1\ExpensesApp.Domain.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\bin\Debug\netstandard2.1\ExpensesApp.Application.pdb
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\bin\Debug\netstandard2.1\ExpensesApp.Domain.pdb
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\obj\Debug\netstandard2.1\ExpensesApp.Persistence.csprojAssemblyReference.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\obj\Debug\netstandard2.1\ExpensesApp.Persistence.AssemblyInfoInputs.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\obj\Debug\netstandard2.1\ExpensesApp.Persistence.AssemblyInfo.cs
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\obj\Debug\netstandard2.1\ExpensesApp.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\obj\Debug\netstandard2.1\ExpensesApp.Persistence.csproj.CopyComplete
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\obj\Debug\netstandard2.1\ExpensesApp.Persistence.dll
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Persistence\obj\Debug\netstandard2.1\ExpensesApp.Persistence.pdb
