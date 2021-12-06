@@ -1,1 +1,0 @@
-ALTER TABLE password_reset ADD CONSTRAINT uq_email UNIQUE (email);

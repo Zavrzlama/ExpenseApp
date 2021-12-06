@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS expenses_expense_type_id_ix ON expenses(expense_type_id)

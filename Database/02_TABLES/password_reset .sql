@@ -1,10 +1,6 @@
-DO $$
-BEGIN
-	IF NOT db_table_exists('public', 'password_reset') THEN
-		CREATE TABLE password_reset (
-			email VARCHAR(200) NOT NULL
-			,resettoken VARCHAR(1000) NOT NULL
-			,expirationdate DATE NOT NULL
-			);
-	END IF;
-END; $$
+CREATE TABLE IF NOT EXISTS password_reset (
+	email VARCHAR(200) NOT NULL,
+	reset_token VARCHAR(1000) NOT NULL,
+	expiration_date DATE NOT NULL,
+	PRIMARY KEY (email, expiration_date)
+);
