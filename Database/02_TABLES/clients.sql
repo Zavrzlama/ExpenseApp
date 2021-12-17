@@ -1,7 +1,9 @@
 CREATE TABLE IF NOT EXISTS clients (
-	id NUMERIC NOT NULL DEFAULT nextval('clients_seq') NOT NULL,
+	id NUMERIC DEFAULT nextval('clients_seq') NOT NULL,
 	code VARCHAR(10),
-	client_name VARCHAR(100) NOT NULL,
+	clinet_name VARCHAR(100) NOT NULL,
+	client_surname VARCHAR(500) NOT NULL,
+	client_email VARCHAR(500) NOT NULL,
 	description VARCHAR(4000),
 	client_role_id NUMERIC NOT NULL,
 	user_created NUMERIC NOT NULL,
