@@ -3,7 +3,7 @@
 namespace ExpensesApp.Application.Contracts.Persistence
 { 
 
-    public interface IExpenseTypesRepository : IAsyncRepository<ExpenseType>
+    public interface IExpenseTypeRepository : IAsyncRepository<ExpenseType>
     {
         
     }

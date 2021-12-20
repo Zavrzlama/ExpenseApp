@@ -20,9 +20,10 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.DeleteClientRole
 
         public async Task<Unit> Handle(DeleteClientRoleCommand request, CancellationToken cancellationToken)
         {
-            var clientRole = await _repository.GetByIdAsync(request.ClientRole);
+            var clientRole = await _repository.GetByIdAsync(request.ClientRoleId);
 
-            await _repository.DeleteAsync(clientRole);
+            if (clientRole != null)
+                await _repository.DeleteAsync(clientRole);
 
             return Unit.Value;
         }

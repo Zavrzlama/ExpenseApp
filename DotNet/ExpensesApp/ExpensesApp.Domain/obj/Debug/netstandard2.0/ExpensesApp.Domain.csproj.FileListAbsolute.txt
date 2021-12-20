@@ -6,3 +6,5 @@ C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domai
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.csproj.CoreCompileInputs.cache
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.dll
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.pdb
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\obj\Debug\netstandard2.0\ExpensesApp.Domain.csproj.AssemblyReference.cache

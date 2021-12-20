@@ -23,7 +23,7 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.CreateClientRole
         {
             var createClientRoleCommandResponse = new CreateClientRoleCommandResponse();
 
-            var validator = new CreateClientRoleCommandValidator();
+            var validator = new CreateClientRoleCommandValidator(_repository);
             var validatorResult = await validator.ValidateAsync(request);
 
             if (validatorResult.Errors.Count > 0)
@@ -37,7 +37,7 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.CreateClientRole
 
             if (createClientRoleCommandResponse.Success)
             {
-                var clientRole = new ClientRole() { RoleName = request.RoleName, Description = request.Description };
+                var clientRole = new ClientRole() { RoleName = request.RoleName, Description = request.Description, Code = request.Code};
                 clientRole = await _repository.AddAsync(clientRole);
                 createClientRoleCommandResponse.ClientRole = _mapper.Map<ClientRoleDetailDTO>(clientRole);
             }

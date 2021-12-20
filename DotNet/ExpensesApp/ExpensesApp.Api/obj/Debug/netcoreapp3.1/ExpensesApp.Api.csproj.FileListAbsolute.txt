@@ -37,7 +37,6 @@ C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\b
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\bin\Debug\netcoreapp3.1\ExpensesApp.Application.pdb
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\bin\Debug\netcoreapp3.1\ExpensesApp.Persistence.pdb
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\bin\Debug\netcoreapp3.1\ExpensesApp.Domain.pdb
-C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.csprojAssemblyReference.cache
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.AssemblyInfoInputs.cache
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.AssemblyInfo.cs
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.csproj.CoreCompileInputs.cache
@@ -50,3 +49,5 @@ C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\o
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.dll
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.pdb
 C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.genruntimeconfig.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.csproj.AssemblyReference.cache
+C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Api\obj\Debug\netcoreapp3.1\ExpensesApp.Api.GeneratedMSBuildEditorConfig.editorconfig

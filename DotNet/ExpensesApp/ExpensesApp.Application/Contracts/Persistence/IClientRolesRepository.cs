@@ -5,6 +5,6 @@ namespace ExpensesApp.Application.Contracts.Persistence
 {
     public interface IClientRolesRepository : IAsyncRepository<ClientRole>
     {
-        Task<bool> ClientRoleNameExists(string ClientRoleName);
+        Task<bool> ClientRoleWithCodeExists(string ClientRoleCode);
     }
 }

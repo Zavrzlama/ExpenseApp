@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using ExpensesApp.Application.Contracts.Persistence;
@@ -7,7 +8,7 @@ using MediatR;
 
 namespace ExpensesApp.Application.Features.ClientRoles.Commands.UpdateClientRole
 {
-    public class UpdateClientRoleCommandHandler :IRequestHandler<UpdateClientRoleCommand>
+    public class UpdateClientRoleCommandHandler :IRequestHandler<UpdateClientRoleCommand, UpdateClientRoleCommandResponse>
     {
         private readonly IAsyncRepository<ClientRole> _repository;
         private readonly IMapper _mapper;
@@ -18,14 +19,33 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.UpdateClientRole
             _repository = repository;
 
         }
-        public async Task<Unit> Handle(UpdateClientRoleCommand request, CancellationToken cancellationToken)
+        public async Task<UpdateClientRoleCommandResponse> Handle(UpdateClientRoleCommand request, CancellationToken cancellationToken)
         {
             var clientRole = await _repository.GetByIdAsync(request.ClientRoleId);
-            _mapper.Map(clientRole, request);
+            var response = new UpdateClientRoleCommandResponse();
 
-            await _repository.UpdateAsync(clientRole);
+            if (clientRole != null)
+                response.IsFound = true;
 
-            return Unit.Value;
+            if (response.IsFound)
+            {
+                var validator = new UpdateClientRoleCommandValidator();
+                var validatorResult = validator.ValidateAsync(request);
+
+                if (validatorResult.Result.Errors.Count > 0)
+                {
+                    response.Success = false;
+                    foreach (var error in validatorResult.Result.Errors)
+                        response.ValidationErrors.Add(error.ToString());
+                }
+
+                if (response.Success)
+                {
+                    _mapper.Map(clientRole, request);
+                    await _repository.UpdateAsync(clientRole);
+                }
+            }
+            return response;
         }
     }
 }

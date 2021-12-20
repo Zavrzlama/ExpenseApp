@@ -3,6 +3,7 @@
     public class ClientRoleDetailDTO
     {
         public int ClientRoleId { get; set; }
+        public string Code { get; set; }
         public string RoleName { get; set; }
         public string Description { get; set; }
     }

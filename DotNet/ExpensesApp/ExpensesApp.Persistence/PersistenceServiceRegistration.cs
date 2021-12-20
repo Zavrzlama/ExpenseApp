@@ -15,6 +15,7 @@ namespace ExpensesApp.Persistence
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IClientRolesRepository, ClientRoleRepository>();
+            services.AddScoped<IClientRepository, ClientRepository>();
 
             return services;
         }

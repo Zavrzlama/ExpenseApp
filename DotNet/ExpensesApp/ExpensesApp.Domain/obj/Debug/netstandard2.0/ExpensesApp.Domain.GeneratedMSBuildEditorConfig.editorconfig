@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = ExpensesApp.Domain
+build_property.ProjectDir = C:\Users\tonism\Documents\GitHub\ExpenseApp\DotNet\ExpensesApp\ExpensesApp.Domain\
