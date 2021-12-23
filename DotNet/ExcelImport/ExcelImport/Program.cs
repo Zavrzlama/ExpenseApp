@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Npgsql;
 using NpgsqlTypes;
@@ -12,44 +14,29 @@ namespace ExcelImport
     {
         static void Main(string[] args)
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=0000;Database=postgres";
+            var builder = new ConfigurationBuilder();
+            CreateBuilder(builder);
 
-            var conn = new NpgsqlConnection(connectionString);
-            conn.Open();
-
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            List<ImportModel> models = new List<ImportModel>();
-            Dictionary<string, string> jsons = new Dictionary<string, string>();
-            var excelDoc = GetExcelFile();
-
-            foreach (var worksheet in excelDoc.Workbook.Worksheets.Where(x => x.Name != "Balance" && x.Name != "Stanje")
-            )
+            var host = Host.CreateDefaultBuilder().ConfigureServices((context, services) =>
             {
-                string json = string.Empty;
-                for (int i = 1; i < worksheet.Dimension.End.Row; i++)
-                    json = JsonConvert.SerializeObject(GetDataFromSheet(worksheet));
 
-                jsons.Add(worksheet.Name, json);
-            }
-
-            foreach (var json in jsons)
-            {
-                using (var cmd = new NpgsqlCommand("CALL ImportData_Insert(@p1,@p2)", conn))
-                {
-                    cmd.Parameters.AddWithValue("p1", NpgsqlDbType.Varchar, json.Key);
-                    cmd.Parameters.AddWithValue("p2", NpgsqlDbType.Json, json.Value);
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            });
+            
         }
 
 
-        private static ExcelPackage GetExcelFile()
+        private static void CreateBuilder(IConfigurationBuilder builder)
+        {
+            builder.SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).AddEnvironmentVariables();
+        }
+
+        /*private static ExcelPackage GetExcelFile()
         {
             return new ExcelPackage(new FileInfo(@"C:\Users\tonism\Downloads\Stanje_tekuci.xlsx"));
-        }
+        }*/
 
-        private static List<ImportModel> GetDataFromSheet(ExcelWorksheet worksheet)
+        /*private static List<ImportModel> GetDataFromSheet(ExcelWorksheet worksheet)
         {
             List<ImportModel> list = new List<ImportModel>();
             for (int i = 2; i < worksheet.Dimension.End.Row; i++)
@@ -72,6 +59,6 @@ namespace ExcelImport
             }
 
             return list;
-        }
+        }*/
     }
 }

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj": {}
+    "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj": {
+    "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj",
+        "projectUniqueName": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj",
         "projectName": "ExcelImport",
-        "projectPath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj",
+        "projectPath": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExcelImport\\ExcelImport\\ExcelImport.csproj",
         "packagesPath": "C:\\Users\\tonism\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tonism\\Desktop\\git_test\\DotNet\\ExcelImport\\ExcelImport\\obj\\",
+        "outputPath": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExcelImport\\ExcelImport\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\tonism\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Trunk\\DotNET3.5\\Dll\\Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +47,10 @@
             "EPPlus": {
               "target": "Package",
               "version": "[5.5.5, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -69,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
