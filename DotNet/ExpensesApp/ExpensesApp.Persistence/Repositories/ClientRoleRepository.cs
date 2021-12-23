@@ -12,9 +12,15 @@ namespace ExpensesApp.Persistence.Repositories
         {
         }
 
-        public Task<bool> ClientRoleWithCodeExists(string ClientRoleCode)
+        public Task<bool> ClientRoleWithCodeExists(string clientRoleCode)
         {
-            var clientRoleExist = _dbContext.ClientRoles.Any(x => x.Code == ClientRoleCode);
+            var clientRoleExist = _dbContext.ClientRoles.Any(x => x.Code == clientRoleCode);
+            return Task.FromResult(clientRoleExist);
+        }
+
+        public Task<bool> ClientRoleWithIdExists(int clientRoleId)
+        {
+            var clientRoleExist = _dbContext.ClientRoles.Any(x => x.ClientRoleId == clientRoleId);
             return Task.FromResult(clientRoleExist);
         }
     }

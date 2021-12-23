@@ -30,18 +30,18 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.UpdateClientRole
             if (response.IsFound)
             {
                 var validator = new UpdateClientRoleCommandValidator();
-                var validatorResult = validator.ValidateAsync(request);
+                var validatorResult = await validator.ValidateAsync(request);
 
-                if (validatorResult.Result.Errors.Count > 0)
+                if (validatorResult.Errors.Count > 0)
                 {
                     response.Success = false;
-                    foreach (var error in validatorResult.Result.Errors)
+                    foreach (var error in validatorResult.Errors)
                         response.ValidationErrors.Add(error.ToString());
                 }
 
                 if (response.Success)
                 {
-                    _mapper.Map(clientRole, request);
+                    _mapper.Map(request, clientRole);
                     await _repository.UpdateAsync(clientRole);
                 }
             }

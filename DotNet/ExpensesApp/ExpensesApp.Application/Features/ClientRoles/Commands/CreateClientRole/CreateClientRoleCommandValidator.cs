@@ -20,7 +20,7 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.CreateClientRole
 
         private async Task<bool> ClientRoleExists(CreateClientRoleCommand command, CancellationToken token)
         {
-            return !(await _repository.ClientRoleWithCodeExists(command.Code));
+            return !await _repository.ClientRoleWithCodeExists(command.Code);
         }
     }
 }

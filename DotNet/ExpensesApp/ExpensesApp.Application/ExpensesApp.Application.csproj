@@ -17,8 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Clients\Commands\DeleteClient\" />
-    <Folder Include="Features\Clients\Commands\UpdateClient\" />
+    <Folder Include="Features\Currencies\" />
+    <Folder Include="Features\ExpenseTypes\" />
+    <Folder Include="Features\Expenses\" />
+    <Folder Include="Features\Stores\" />
   </ItemGroup>
 
 </Project>
