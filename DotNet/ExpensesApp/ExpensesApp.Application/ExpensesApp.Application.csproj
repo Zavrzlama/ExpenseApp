@@ -17,10 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Currencies\" />
-    <Folder Include="Features\ExpenseTypes\" />
-    <Folder Include="Features\Expenses\" />
-    <Folder Include="Features\Stores\" />
+    <Folder Include="Features\ExpenseTypes\Commands\Create\" />
+    <Folder Include="Features\ExpenseTypes\Commands\Delete\" />
+    <Folder Include="Features\ExpenseTypes\Commands\Update\" />
+    <Folder Include="Features\ExpenseTypes\Queries\" />
+    <Folder Include="Features\Stores\Queries\" />
   </ItemGroup>
 
 </Project>

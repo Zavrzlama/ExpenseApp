@@ -8,7 +8,7 @@ using MediatR;
 
 namespace ExpensesApp.Application.Features.Cities.Queries.GetCityList
 {
-    public class GetCityListQueryHandler : IRequestHandler<GetCityListQuery, List<GetCityListDTO>>
+    public class GetCityListQueryHandler : IRequestHandler<GetCityListQuery, List<CityListDTO>>
     {
         private readonly IAsyncRepository<City> _repository;
         private readonly IMapper _mapper;
@@ -19,11 +19,11 @@ namespace ExpensesApp.Application.Features.Cities.Queries.GetCityList
             _mapper = mapper;
         }
 
-        public async Task<List<GetCityListDTO>> Handle(GetCityListQuery request, CancellationToken cancellationToken)
+        public async Task<List<CityListDTO>> Handle(GetCityListQuery request, CancellationToken cancellationToken)
         {
             var cities = await _repository.ListAllAsync();
 
-            return _mapper.Map<List<GetCityListDTO>>(cities);
+            return _mapper.Map<List<CityListDTO>>(cities);
         }
     }
 }

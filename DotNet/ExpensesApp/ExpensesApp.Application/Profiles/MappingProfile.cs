@@ -1,4 +1,7 @@
-﻿using AutoMapper;
+﻿using System.Security.Claims;
+using AutoMapper;
+using ExpensesApp.Application.Features.Cities.Commands.Create;
+using ExpensesApp.Application.Features.Cities.Queries.GetCityDetail;
 using ExpensesApp.Application.Features.Cities.Queries.GetCityList;
 using ExpensesApp.Application.Features.ClientRoles.Commands.CreateClientRole;
 using ExpensesApp.Application.Features.ClientRoles.Commands.UpdateClientRole;
@@ -31,6 +34,8 @@ namespace ExpensesApp.Application.Profiles
 
             //Cities
             CreateMap<City, GetCityListQuery>().ReverseMap();
+            CreateMap<City, CreateCityCommand>().ReverseMap();
+            CreateMap<City, CityDetailDTO>().ReverseMap();
 
         }
     }

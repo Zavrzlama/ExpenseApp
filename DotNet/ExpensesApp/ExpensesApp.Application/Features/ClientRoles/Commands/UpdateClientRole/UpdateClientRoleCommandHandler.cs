@@ -1,14 +1,14 @@
-﻿using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using ExpensesApp.Application.Contracts.Persistence;
 using ExpensesApp.Domain.Entities;
 using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ExpensesApp.Application.Features.ClientRoles.Commands.UpdateClientRole
 {
-    public class UpdateClientRoleCommandHandler :IRequestHandler<UpdateClientRoleCommand, UpdateClientRoleCommandResponse>
+    public class
+        UpdateClientRoleCommandHandler : IRequestHandler<UpdateClientRoleCommand, UpdateClientRoleCommandResponse>
     {
         private readonly IAsyncRepository<ClientRole> _repository;
         private readonly IMapper _mapper;
@@ -17,9 +17,10 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.UpdateClientRole
         {
             _mapper = mapper;
             _repository = repository;
-
         }
-        public async Task<UpdateClientRoleCommandResponse> Handle(UpdateClientRoleCommand request, CancellationToken cancellationToken)
+
+        public async Task<UpdateClientRoleCommandResponse> Handle(UpdateClientRoleCommand request,
+            CancellationToken cancellationToken)
         {
             var clientRole = await _repository.GetByIdAsync(request.ClientRoleId);
             var response = new UpdateClientRoleCommandResponse();
@@ -30,7 +31,7 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.UpdateClientRole
             if (response.IsFound)
             {
                 var validator = new UpdateClientRoleCommandValidator();
-                var validatorResult = await validator.ValidateAsync(request);
+                var validatorResult = await validator.ValidateAsync(request, cancellationToken);
 
                 if (validatorResult.Errors.Count > 0)
                 {
@@ -45,6 +46,7 @@ namespace ExpensesApp.Application.Features.ClientRoles.Commands.UpdateClientRole
                     await _repository.UpdateAsync(clientRole);
                 }
             }
+
             return response;
         }
     }
