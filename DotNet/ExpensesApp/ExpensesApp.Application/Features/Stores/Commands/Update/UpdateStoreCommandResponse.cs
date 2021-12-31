@@ -9,6 +9,6 @@ namespace ExpensesApp.Application.Features.Stores.Commands.Update
             
         }
 
-        public bool IsFound { get; set; }
+        public bool StoreExists { get; set; }
     }
 }

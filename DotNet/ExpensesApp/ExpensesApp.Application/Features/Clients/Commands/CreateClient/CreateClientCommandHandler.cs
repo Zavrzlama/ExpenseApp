@@ -39,7 +39,7 @@ namespace ExpensesApp.Application.Features.Clients.Commands.CreateClient
             {
                 var client = _mapper.Map<Client>(request);
                 client = await _repository.AddAsync(client);
-                response.Client = _mapper.Map<GetClientDetailDTO>(client);
+                response.Client = _mapper.Map<ClientDetailDTO>(client);
             }
 
             return response;

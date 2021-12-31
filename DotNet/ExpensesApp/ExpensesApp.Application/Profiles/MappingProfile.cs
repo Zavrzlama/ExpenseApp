@@ -27,8 +27,8 @@ namespace ExpensesApp.Application.Profiles
             CreateMap<ClientRole,UpdateClientRoleCommand>().ReverseMap();
 
             //Clients
-            CreateMap<Client, GetClientsListDTO>().ReverseMap();
-            CreateMap<Client, GetClientDetailDTO>().ReverseMap();
+            CreateMap<Client, ClientsListDTO>().ReverseMap();
+            CreateMap<Client, ClientDetailDTO>().ReverseMap();
             CreateMap<Client, CreateClientCommand>().ReverseMap();
             CreateMap<Client, UpdateClientCommand>().ReverseMap();
 

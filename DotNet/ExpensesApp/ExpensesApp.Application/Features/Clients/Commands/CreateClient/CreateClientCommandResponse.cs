@@ -10,6 +10,6 @@ namespace ExpensesApp.Application.Features.Clients.Commands.CreateClient
             
         }
 
-        public  GetClientDetailDTO Client { get; set; }
+        public  ClientDetailDTO Client { get; set; }
     }
 }

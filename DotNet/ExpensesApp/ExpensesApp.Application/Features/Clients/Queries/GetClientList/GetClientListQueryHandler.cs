@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExpensesApp.Application.Features.Clients.Queries.GetClientList
 {
-    public class GetClientListQueryHandler : IRequestHandler<GetClientListQuery, List<GetClientsListDTO>>
+    public class GetClientListQueryHandler : IRequestHandler<GetClientListQuery, List<ClientsListDTO>>
     {
         private readonly IMapper _mapper;
         private readonly IAsyncRepository<Client> _repository;
@@ -19,11 +19,11 @@ namespace ExpensesApp.Application.Features.Clients.Queries.GetClientList
             _repository = repository;
         }
 
-        public async Task<List<GetClientsListDTO>> Handle(GetClientListQuery request, CancellationToken cancellationToken)
+        public async Task<List<ClientsListDTO>> Handle(GetClientListQuery request, CancellationToken cancellationToken)
         {
             var allClients = await _repository.ListAllAsync();
 
-            return _mapper.Map<List<GetClientsListDTO>>(allClients);
+            return _mapper.Map<List<ClientsListDTO>>(allClients);
         }
     }
 }

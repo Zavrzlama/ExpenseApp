@@ -4,8 +4,11 @@ namespace ExpensesApp.Application.Features.Currencies.Commands.Update
 {
     public class UpdateCurrencyCommandResponse : BaseResponse
     {
-        public UpdateCurrencyCommandResponse():base()
+        public UpdateCurrencyCommandResponse() : base()
         {
         }
+
+        public bool CurrencyExists { get; set; }
     }
 }
+

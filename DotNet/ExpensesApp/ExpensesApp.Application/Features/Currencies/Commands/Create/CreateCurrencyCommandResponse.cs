@@ -9,6 +9,6 @@ namespace ExpensesApp.Application.Features.Currencies.Commands.Create
         {
         }
 
-        private CurrencyDetailDTO Currency { get; set; }
+        public CurrencyDetailDTO Currency { get; set; }
     }
 }
