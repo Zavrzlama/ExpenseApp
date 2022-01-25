@@ -1,0 +1,32 @@
+<mat-sidenav-container class="app-container" autosize>
+  
+<mat-sidenav mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+        <h1>Menu</h1>
+    </mat-toolbar>
+<mat-nav-list>
+    <mat-list-item>
+        <mat-icon>home</mat-icon>
+        <span *ngIf="isExpanded || isShowing">Home</span>
+    </mat-list-item>
+
+    <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+        <mat-icon>book</mat-icon>
+        <span *ngIf="isExpanded || isShowing">Codebooks</span>
+        <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+    </mat-list-item>
+    <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
+        <a mat-list-item routerLink="/clientRolesOverview">Client roles</a>
+        <a mat-list-item routerLink="/citiesOverview">Cities</a>
+        <a mat-list-item routerLink="/currenciesOverview">Currencies</a>
+    </div>
+</mat-nav-list>
+
+</mat-sidenav>
+<mat-sidenav-content class="example-sidenav-content">
+    <router-outlet></router-outlet>
+</mat-sidenav-content>
+
+
+</mat-sidenav-container>

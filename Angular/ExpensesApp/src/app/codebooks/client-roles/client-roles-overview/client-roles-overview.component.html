@@ -1,0 +1,43 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Client roles
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button mat-raised-button color='primary' (click)="openDialog(0)">
+                <mat-icon>create</mat-icon>New client role
+            </button>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <table mat-table [dataSource]="clientRolesData">
+
+            <ng-container matColumnDef="code">
+                <th mat-header-cell *matHeaderCellDef>Code</th>
+                <td mat-cell *matCellDef="let clientRole">{{clientRole.code}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Role name</th>
+                <td mat-cell *matCellDef="let clientRole">{{clientRole.name}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>Role name</th>
+                <td mat-cell *matCellDef="let clientRole">{{clientRole.description}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef>Actions</th>
+                <td mat-cell *matCellDef="let clientRole"><button mat-raised-button color="primary"
+                        (click)="openDialog(clientRole.id)">
+                        <mat-icon>create</mat-icon>
+                    </button> </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>{{title}} currency</mat-card-title>
+    <mat-card-content>
+        <form novalidate (ng-submit)="saveCurrency()" [formGroup]="currencyFormGroup">
+            <mat-form-field appearance="fill" class="formField">
+                <mat-label>Code</mat-label>
+                <input matInput placeholder="EUR" formControlName="code">
+                <mat-hint>Use unique code</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="formField">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Europaen EUR" formControlName="name">
+            </mat-form-field>
+
+        </form>
+    </mat-card-content>
+</mat-card>

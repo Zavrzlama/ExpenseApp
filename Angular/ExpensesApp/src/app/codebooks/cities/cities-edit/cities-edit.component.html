@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>{{title}} city</mat-card-title>
+  <mat-card-content>
+    <form novalidate (ngSubmit)="saveCity()" [formGroup]="CityFormGroup">
+      
+      <mat-form-field appearance="fill" class="formField">
+        <mat-label>Postal code:</mat-label>
+        <input matInput placeholder="52100" formControlName="postalCode">
+        <mat-hint>Use unique postal code</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="formField">
+        <mat-label>City name</mat-label>
+        <input matInput placeholder="Pula" formControlName="cityName">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="formField">Save<mat-icon>check</mat-icon></button>
+    </form>
+  </mat-card-content>
+
+</mat-card>

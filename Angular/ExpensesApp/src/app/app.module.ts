@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ClientRoleModule } from './clientRole/client-role.module';
-import { RouterModule } from '@angular/router';
-import { ClientModule } from './client/client.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestModule } from './test/test.module';
+import { MainModule } from './main/main.module';
+
 
 @NgModule({
   declarations: [
@@ -13,10 +14,10 @@ import { ClientModule } from './client/client.module';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([]),
-    HttpClientModule,
-    ClientRoleModule,
-    ClientModule
+    BrowserAnimationsModule,
+    TestModule,
+    MainModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
