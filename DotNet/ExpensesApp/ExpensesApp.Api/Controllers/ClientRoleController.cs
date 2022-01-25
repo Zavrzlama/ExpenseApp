@@ -62,6 +62,9 @@ namespace ExpensesApp.Api.Controllers
             if (!response.IsFound)
                 return NotFound();
 
+            if (!response.Success)
+                return BadRequest(response.ValidationErrors);
+
             return NoContent();
         }
 

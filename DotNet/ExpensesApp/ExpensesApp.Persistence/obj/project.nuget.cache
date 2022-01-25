@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tfuyqpWqHEoK0CMlRV84xFWPMmAyMfD+jwpsd6djRzYC2nxzT1H+EJo9A7mNPCUszmx/1TmpgRCEGU6CX2wJ3A==",
+  "dgSpecHash": "pUMwvV+zSqiKD2wfJpM0jXm3SV7lGJpRKxDgUbxHgPLkg6ApZkgphgGGcNlCO9JhhzFGwSEDmA0EQrfEWsAVzQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonism\\Documents\\GitHub\\ExpenseApp\\DotNet\\ExpensesApp\\ExpensesApp.Persistence\\ExpensesApp.Persistence.csproj",
   "expectedPackageFiles": [
