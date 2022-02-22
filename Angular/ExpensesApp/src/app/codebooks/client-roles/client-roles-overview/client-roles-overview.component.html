@@ -10,7 +10,7 @@
         </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-        <table mat-table [dataSource]="clientRolesData">
+        <table mat-table [dataSource]="dataSource">
 
             <ng-container matColumnDef="code">
                 <th mat-header-cell *matHeaderCellDef>Code</th>
@@ -23,7 +23,7 @@
             </ng-container>
 
             <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef>Role name</th>
+                <th mat-header-cell *matHeaderCellDef>Description</th>
                 <td mat-cell *matCellDef="let clientRole">{{clientRole.description}}</td>
             </ng-container>
 

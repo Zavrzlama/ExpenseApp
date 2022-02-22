@@ -1,1 +1,40 @@
-<p>clients-edit works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            {{title}} client
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <form novalidate (ngSubmit)="save()" [formGroup]="formGroup">
+
+                <mat-form-field appearance="fill" class="form-field">
+                    <mat-label>Code</mat-label>
+                    <input matInput placeholder="Cln1" formControlName="code">
+                    <mat-hint>Code is required</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="form-field">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Client 1" formControlName="name">
+                    <mat-hint>Name is required</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="form-field">
+                    <mat-label>Choose client role</mat-label>
+                    <mat-select formControlName='clientRoleId'>
+                        <mat-option *ngFor="let clientRole of clientRoles" [value]="clientRole.id">
+                            {{clientRole.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="form-field">
+                    <mat-label>Description</mat-label>
+                    <input matInput placeholder="Description" formControlName="description">
+                </mat-form-field>
+
+            <button mat-raised-button color="primary" (click)="save()">Save <mat-icon>check</mat-icon></button>
+        </form>
+    </mat-card-content>
+</mat-card>

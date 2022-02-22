@@ -1,8 +1,8 @@
 <mat-card>
   <mat-card-title>{{title}} city</mat-card-title>
   <mat-card-content>
-    <form novalidate (ngSubmit)="saveCity()" [formGroup]="CityFormGroup">
-      
+    <form novalidate (ngSubmit)="saveCity()" [formGroup]="formGroup">
+
       <mat-form-field appearance="fill" class="formField">
         <mat-label>Postal code:</mat-label>
         <input matInput placeholder="52100" formControlName="postalCode">

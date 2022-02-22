@@ -1,46 +1,40 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ICityOverviewModel } from '../Models/ICityOverviewModel';
-
+import { FormBuilder, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { CodebookForm } from '../../CodebookForm';
+import { CityOverview } from '../Models/CityOverview.model';
 
 @Component({
   selector: 'app-cities-edit',
   templateUrl: './cities-edit.component.html',
   styleUrls: ['./cities-edit.component.scss']
 })
-export class CitiesEditComponent implements OnInit {
+export class CitiesEditComponent extends CodebookForm implements OnInit {
 
-  CityFormGroup!: FormGroup;
-  title: string='';
-
-  constructor(private formBuilder: FormBuilder, 
-              private dialogRef: MatDialogRef<CitiesEditComponent>, 
-              @Inject(MAT_DIALOG_DATA) private data: ICityOverviewModel) { 
-              }
+  constructor(
+    private formBuilder: FormBuilder,
+    @Inject(MAT_DIALOG_DATA) private data: CityOverview) { super(); }
 
   ngOnInit(): void {
-    this.CityFormGroup = this.formBuilder.group({
-      postalCode: ['', Validators.required],
-      cityName: ['', Validators.required]
-    });
-
+    this.setupTitle(this.data.id);
+    this.setupForm();
     this.fillForm();
-
-    if(this.data.id == null){
-      this.title = 'New';
-    }else{
-      this.title = 'Edit';
-    }
   }
 
-fillForm():void{
-  this.CityFormGroup.patchValue({
-    postalCode: this.data.postalCode,
-    cityName: this.data.name
-  })
-}
+  setupForm(): void {
+    this.formGroup = this.formBuilder.group({
+      postalCode: ["", Validators.required],
+      cityName: ["", Validators.required]
+    });
+  }
 
-  saveCity(): void { }
+  fillForm(): void {
+    this.formGroup.patchValue({
+      postalCode: this.data.postalCode,
+      cityName: this.data.name
+    })
+  }
+
+  save(): void { }
 
 }

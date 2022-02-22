@@ -3,12 +3,12 @@
         <mat-card-title>{{title}} client role</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <form novalidate (ngSubmit)="saveClientRole" [formGroup]="clientRoleFormGroup">
+        <form novalidate (ngSubmit)="save()" [formGroup]="formGroup">
 
          <mat-form-field appereance="fill" class="formField">
              <mat-label>Code</mat-label>
              <input matInput placeholder="Code"  formControlName="code">
-             <mat-hint>Code is required and nedds to be unique</mat-hint>
+             <mat-hint>Code is required and needs to be unique</mat-hint>
          </mat-form-field>   
 
          <mat-form-field appereance="fill" class="formField">

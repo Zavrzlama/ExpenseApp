@@ -18,12 +18,11 @@ import { ExpenseTypesOverviewComponent } from './expense-types/expense-types-ove
 import { ExpenseTypesEditComponent } from './expense-types/expense-types-edit/expense-types-edit.component';
 
 const routes: Routes = [
-{ path: "clientRolesOverview", component: ClientRolesOverviewComponent },
-{ path: "citiesOverview", component: CitiesOverviewComponent },
-{ path: "citiesEdit", component: CitiesEditComponent },
-{ path: 'currenciesOverview', component: CurrenciesOverviewComponent },
-{ path: 'currenciesEdit', component: CurrenciesEditComponent },
-{ path: "", component: CitiesOverviewComponent }]
+  { path: "clientRolesOverview", component: ClientRolesOverviewComponent },
+  { path: "citiesOverview", component: CitiesOverviewComponent },
+  { path: 'currenciesOverview', component: CurrenciesOverviewComponent },
+  { path: 'clientsOverview', component: ClientsOverviewComponent },
+  { path: "", component: CitiesOverviewComponent }]
 
 
 @NgModule({
