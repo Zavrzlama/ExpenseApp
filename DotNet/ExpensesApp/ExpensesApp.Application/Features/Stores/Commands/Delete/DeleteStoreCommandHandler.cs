@@ -14,9 +14,14 @@ namespace ExpensesApp.Application.Features.Stores.Commands.Delete
         {
             _repository = repository;
         }
-        public Task<Unit> Handle(DeleteStoreCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteStoreCommand request, CancellationToken cancellationToken)
         {
-            throw new System.NotImplementedException();
+            var store = await _repository.GetByIdAsync(request.StoreId);
+
+            if (store != null)
+                await _repository.DeleteAsync(store);
+
+            return Unit.Value;
         }
     }
 }

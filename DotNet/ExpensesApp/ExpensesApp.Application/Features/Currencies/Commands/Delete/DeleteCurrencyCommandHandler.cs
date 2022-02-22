@@ -14,6 +14,7 @@ namespace ExpensesApp.Application.Features.Currencies.Commands.Delete
         {
             _repository = repository;
         }
+
         public async Task<Unit> Handle(DeleteCurrencyCommand request, CancellationToken cancellationToken)
         {
             var currency = await _repository.GetByIdAsync(request.CurrencyId);
