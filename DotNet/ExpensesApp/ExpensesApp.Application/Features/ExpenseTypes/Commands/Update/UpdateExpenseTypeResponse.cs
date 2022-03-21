@@ -2,9 +2,9 @@
 
 namespace ExpensesApp.Application.Features.ExpenseTypes.Commands.Update
 {
-    public class UpdateEpenseTypeResponse : BaseResponse
+    public class UpdateExpenseTypeResponse : BaseResponse
     {
-        public UpdateEpenseTypeResponse() : base()
+        public UpdateExpenseTypeResponse() : base()
         {
         }
     }
